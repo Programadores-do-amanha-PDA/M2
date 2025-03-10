@@ -31,6 +31,8 @@ var numeros = ["beatriz", "tabs", "davi", "carlos"];
 //  console.log(numeros[i]);
 // }
 
+exibirNome();
+
 // LET -> defini uma variavel local e flexivel
 function exibirNome(){
     let nome = "Joao"
@@ -51,3 +53,29 @@ const perfumes = [
 ]
 
 // perfumes[0].nome = "teste";
+
+// variaveis -> armazenar STRING/BOOLEAN/NUMBER/LISTA/FUNCTIONS
+
+// função anonima -> função que nao tem nome 
+// obs: elas executam uma pequena parte de uma função maior
+const somar = function (valor1,valor2){
+      return valor1 + valor2;
+}
+
+// arrow function -> simplificação da função anonima (sigla)
+const subtrair = (valor1, valor2) => {
+   return valor2 - valor1;
+}
+
+const exibir = (valor) => {
+   console.log(valor)
+}
+
+function calculadora(a,b){
+   let resultadoSoma = somar(a,b);
+   let resultadoSubtracao = subtrair(a,b);
+   exibir(resultadoSoma);
+   exibir(resultadoSubtracao);
+}
+
+
