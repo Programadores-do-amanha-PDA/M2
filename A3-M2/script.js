@@ -24,12 +24,50 @@ const calculadora = (valor1,valor2,operacao) => {
 
 // DOM -> Descrição escrita do documento HTML ou seja descrição de todas as TAGS
 // DOM -> SELETORES (getElementById/getElementByTagName/getElementsByClassName)
-const titulo = document.getElementById("titulo");
-titulo.style.color = "pink";
-titulo.innerText = "Mundo alterado";
+// const titulo = document.getElementById("titulo");
+// titulo.style.color = "pink";
+// titulo.innerText = "Mundo alterado";
 
 // 1 -> Criaremos uma estrutura no HTML (div/input/button/ul/h1)
 // 2 -> Trazer essa estrutura HTML para o JAVASCRIPT
 // 3 -> Faremos alterações nessa estrutura HTML pelo JAVASCRIPT
 // 4 -> Devolveremos o HTML atualizado
+
+
+const createSection = (titleParam, paragraphParam, btnParam) => {
+    // CRIANDO ELEMENTO NO JAVASCRIPT
+    const container = document.createElement("div");
+    const title = document.createElement("h1");
+    const paragraph = document.createElement("p");
+    const btnClick = document.createElement("button");
+
+    // ADICIONAR TEXTOS 
+    title.innerText = titleParam;
+    paragraph.innerText = paragraphParam;
+    btnClick.innerText = btnParam;
+
+    // ADICIONANDO CLASSES PARA ESTILIZAÇÃO
+    container.classList.add("style-container");
+    title.classList.add("style-title");
+    paragraph.classList.add("style-paragraph");
+    btnClick.classList.add("style-btn");
+
+    // ADICIONAR EVENTOS(AÇÕES)
+    // addEventListener associa uma interação do usuario com uma função
+    btnClick.addEventListener("click", ()=> {
+        console.log("cliquei");
+    });
+
+    // ADICIONAR ELEMENTOS NO HTML
+    container.appendChild(title);
+    container.appendChild(paragraph);
+    container.appendChild(btnClick);
+    document.body.appendChild(container);
+}
+
+createSection("Seja bem vindo!", "Projeto calculadora em construção", "Clique aqui");
+createSection("Batatinha frita 1,2,3", "Projeto round 6", "Jogue Agora");
+createSection("Narutinho x Boruto", "Novo jogo shippuden", "Lute Lute");
+createSection("Confidencial", "Mantenha Sigilo", "Espionar");
+
 
