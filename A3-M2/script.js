@@ -40,12 +40,18 @@ const createSection = (titleParam, paragraphParam, btnParam) => {
     const title = document.createElement("h1");
     const paragraph = document.createElement("p");
     const btnClick = document.createElement("button");
+    const inputVl1 = document.createElement("input");
+    const inputVl2 = document.createElement("input");
 
     // ADICIONAR TEXTOS 
     title.innerText = titleParam;
     paragraph.innerText = paragraphParam;
     btnClick.innerText = btnParam;
 
+    // textos cinzas 
+    inputVl1.placeholder = "digite o primeiro valor";
+    inputVl2.placeholder = "digite o segundo valor";
+    
     // ADICIONANDO CLASSES PARA ESTILIZAÇÃO
     container.classList.add("style-container");
     title.classList.add("style-title");
@@ -55,13 +61,17 @@ const createSection = (titleParam, paragraphParam, btnParam) => {
     // ADICIONAR EVENTOS(AÇÕES)
     // addEventListener associa uma interação do usuario com uma função
     btnClick.addEventListener("click", ()=> {
-        console.log("cliquei");
+        console.log(Number(inputVl1.value) + Number(inputVl2.value));
     });
 
     // ADICIONAR ELEMENTOS NO HTML
     container.appendChild(title);
     container.appendChild(paragraph);
+    container.appendChild(inputVl1);
+    container.appendChild(inputVl2);
     container.appendChild(btnClick);
+    
+    // adicionando o container feito no javascript ao body do HTML
     document.body.appendChild(container);
 }
 
