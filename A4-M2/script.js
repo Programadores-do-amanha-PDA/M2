@@ -47,17 +47,41 @@ titulo.innerText = "teste alteração";
 const logado = document.getElementsByTagName("input")[0];
 const btnEntrar = document.getElementsByTagName("button")[0];
 
-// inserindo função a ser executada ao botao
-// addEventListener -> função responsavel por associar uma ação do usuario a função
-// primeiro parametro do addEventListener é uma string ""
-// segundo parametro do addEventListener é uma função
-btnEntrar.addEventListener("click", () =>{
+const verificarCorFundo = () => {
     if(logado.value === "true"){
         titulo.style.color = "green";
     }else{
         titulo.style.color = "blue";
     }
+}
+// inserindo função a ser executada ao botao
+// addEventListener -> função responsavel por associar uma ação do usuario a função
+// primeiro parametro do addEventListener é uma string ""
+// segundo parametro do addEventListener é uma função
+btnEntrar.addEventListener("click", function (){
+    if(titulo.style.backgroundColor == "green"){
+       titulo.style.backgroundColor = "red";
+       btnEntrar.innerText = "apagado"
+       logado.style.display = "none";
+    } else{
+       titulo.style.backgroundColor = "green";
+       btnEntrar.innerText = "acesso";
+       logado.style.display = "flex";
+    }
 });
+
+const imgPorta = document.getElementById("img-porta");
+const btnAbrirFechar = document.getElementById("btn-abrir-fechar");
+
+btnAbrirFechar.addEventListener("click", ()=> {
+    if(imgPorta.src === "http://127.0.0.1:5500/porta-aberta.png"){
+        imgPorta.src = "http://127.0.0.1:5500/porta-fechada.png"
+    }else{
+        imgPorta.src = "http://127.0.0.1:5500/porta-aberta.png"
+    }
+})
+
+
 
 
 
