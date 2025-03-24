@@ -207,23 +207,56 @@ console.log(resultadoDobro)
 // var / const / let / Number / String / boolean / function / return / if / else / else if / console
 // log 
 
-// 3) Crie uma função modificarTexto que recebe uma string e um callback. O callback deve transformar a string em maiúsculas.
+// 3) Crie uma função modificarTexto / que recebe uma string e um callback. O callback deve transformar a string em maiúsculas.
 // RESULTADO ESPERADO:
 // const resultado = modificarTexto("Beatriz",maiusculo); // "BEATRIZ"
+function modificarTexto(textoMaiusculo, functionMaiusculo){
+    return functionMaiusculo(textoMaiusculo)
+}
+const resultadoModificarTexto = modificarTexto("erick",maiusculo); // "BEATRIZ"
+console.log(resultadoModificarTexto);
 
-// 4) Crie uma função processarTexto que recebe uma palavra e um callback. O callback deve retornar a primeira letra da palavra.
+// 4) Crie uma função processarTexto / que recebe uma palavra e um callback. O callback deve retornar a primeira letra da palavra.
 // RESULTADO ESPERADO:
 // const resultado = processarTexto("Javascript",primeiraLetra); // J
+function processarTexto(palavra, functionPrimeiraLetra) {
+    return functionPrimeiraLetra(palavra);
+}
+const resultadoPrimeiraLetra = processarTexto("script", primeiraLetra);
+console.log(resultadoPrimeiraLetra); // "J"
 
-// 5) Crie uma função avaliarNumero que recebe um número e um callback. O callback deve verificar se o número é positivo, negativo ou zero.
+// 5) Crie uma função avaliarNumero / que recebe um número e um callback. O callback deve verificar se o número é positivo, negativo ou zero.
 // RESULTADO ESPERADO:
-// const resultado = avaliarNumero(-10,verificarNumero); // "positivo"
+// const resultado = avaliarNumero(-10,verificarNumero); // "negativo"
+function avaliarNumero(numero, functionVerificarNumero){
+   return functionVerificarNumero(numero)
+}
+const resultadoAvaliarNumero = avaliarNumero(-10,verificarNumero); // "negativo"
+console.log(resultadoAvaliarNumero)
 
 // 6) Crie uma função contarCaracteres que recebe uma string e um callback. O callback deve retornar o número de caracteres da string.
 // RESULTADO ESPERADO:
-// const resultado = contarCaracteres("Hello", tamanhoString); // 4
+// const resultado = contarCaracteres("Hello", tamanhoString); // 5
 
 // 7) Crie uma função juntarPalavras que recebe duas palavras e um callback. O callback deve concatenar as palavras com um espaço entre elas.
 // RESULTADO ESPERADO:
 // const resultado = juntarPalavras("Hello", "World",concatenar); // "Hello World"
 
+// CRIAR ELEMENTOS JAVASCRIPT
+
+// 1) No JavaScript, crie um elemento <p> / e adicione-o ao body./ Depois, altere o texto do <p> para "Texto alterado pelo JavaScript!".
+// criando elemento
+const paragrafo = document.createElement("P");
+// adicionando ao body
+document.body.appendChild(paragrafo);
+paragrafo.innerText = "Texto alterado pelo JavaScript!"
+
+// 2) No JavaScript, crie um botão <button> e adicione-o ao body. Depois, adicione a classe "botao-estilizado" ao botão.
+
+// 3) No JavaScript, crie um <h1> e adicione-o ao body. Depois, altere a cor do texto para "blue".
+
+// 4) No JavaScript, crie uma <div> e adicione-a ao body. Depois, altere a cor de fundo da <div> para "lightgray".
+
+// 5) No JavaScript, crie um <span> e adicione-o ao body. Depois, adicione uma borda de 2px solid black ao <span>.
+
+// 6) No JavaScript, crie um <p> e adicione-o ao body. Depois, aumente o tamanho da fonte para "24px".
