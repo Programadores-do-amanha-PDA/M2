@@ -20,10 +20,10 @@ function somarValores(valor1, valor2){
 
 // array -> []
 // 
-//posição/index/indice/SENHA 0         1       2        3 
+//posição/index/indice/SENHA 
+//                0         1       2        3 
 var numeros = ["beatriz", "tabs", "davi", "carlos"];
-// dahsodhioa(['dbisai', 'nsalnd'])
-// // ["d", "n"]
+
 // variavel de incremento/contador
 // condição para parar o loop
 // incremento
@@ -31,26 +31,26 @@ var numeros = ["beatriz", "tabs", "davi", "carlos"];
 //  console.log(numeros[i]);
 // }
 
-exibirNome();
+// exibirNome();
 
 // LET -> defini uma variavel local e flexivel
-function exibirNome(){
-    let nome = "Joao"
-    nome = "duda"
-    console.log(nome);
-}
+// function exibirNome(){
+//     let nome = "Joao"
+//     nome = "duda"
+//     console.log(nome);
+// }
 
-exibirNome();
-console.log("variavel nome fora da funcao: " + nome)
+// exibirNome();
+// console.log("variavel nome fora da funcao: " + nome)
 
-// CONST -> defini uma variavel que nao irá mudar
-const cpfBeatriz = "123.456.789-00"
-const perfumes = [ 
-    {nome: "boticario1", preco: 1234},
-    {nome: "boticario2", preco: 1236},
-    {nome: "boticario3", preco: 1237},
-    {nome: "boticario4", preco: 1238},
-]
+// // CONST -> defini uma variavel que nao irá mudar
+// const cpfBeatriz = "123.456.789-00"
+// const perfumes = [ 
+//     {nome: "boticario1", preco: 1234},
+//     {nome: "boticario2", preco: 1236},
+//     {nome: "boticario3", preco: 1237},
+//     {nome: "boticario4", preco: 1238},
+// ]
 
 // perfumes[0].nome = "teste";
 
@@ -64,7 +64,7 @@ const somar = function (valor1,valor2){
 
 // arrow function -> simplificação da função anonima (sigla)
 const subtrair = (valor1, valor2) => {
-   return valor2 - valor1;
+   return valor1 - valor2;
 }
 
 const exibir = (valor) => {
@@ -78,4 +78,7 @@ function calculadora(a,b){
    exibir(resultadoSubtracao);
 }
 
-
+// calculadora(30,10)
+console.log(subtrair(3,1))
+console.log(somar(40,54232))
+exibir("teste")

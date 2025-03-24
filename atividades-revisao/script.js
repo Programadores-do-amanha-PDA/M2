@@ -123,7 +123,7 @@ function corrigirProjetos(projeto){
 // const resultado = soma(5, 3);
 // console.log(resultado); // 8
 const soma = (n1,n2) => {
- return n1 + n2
+ return n1 + n2;
 }
 // const resultado = soma(5, 3);
 // console.log(resultado);
@@ -146,20 +146,84 @@ const maiusculo = (texto) => {
 }
 console.log(maiusculo("Beatriz"));
 
-// 4) Crie uma função anônima que receba uma palavra e retorne a primeira letra dela.
+// 4) Crie uma função anônima / que receba uma palavra / e retorne a primeira letra dela.
 // RESULTADO ESPERADO:
 // console.log(primeiraLetra("JavaScript")); // "J"
+const primeiraLetra = (palavra) => {
+   return palavra.charAt(0);
+}
 
-// 5) Crie uma função anônima que receba um número e retorne "positivo", "negativo" ou "zero".
+// 5) Crie uma função anônima / que receba um número / e retorne "positivo", "negativo" ou "zero".
 // RESULTADO ESPERADO:
-// console.log(verificarNumero(10)); // "positivo"
-// console.log(verificarNumero(-5)); // "negativo"
-// console.log(verificarNumero(0)); // "zero"
 
-// 6) Crie uma função anônima que receba uma string e retorne o número de caracteres dela.
-// RESULTADO ESPERADO:
-// console.log(tamanhoString("JavaScript")); // 10
 
-// 7) Crie uma função anônima que receba duas palavras e as retorne juntas com um espaço entre elas.
+const verificarNumero = (numero) => {
+    if(numero > 0){
+        return "positivo"
+    }else if(numero < 0){
+        return "negativo"
+    }else{
+        return "zero"
+    }
+}
+
+console.log(verificarNumero(10)); // "positivo"
+console.log(verificarNumero(-5)); // "negativo"
+console.log(verificarNumero(0)); // "zero"
+
+// 6) Crie uma função anônima/ que receba uma string /e retorne o número de caracteres dela.
 // RESULTADO ESPERADO:
-// console.log(concatenar("Hello", "World")); // "Hello World"
+const tamanhoString = (texto) => {
+    return texto.length;
+}
+console.log(tamanhoString("JavaScript")); // 10
+
+// 7) Crie uma função anônima / que receba duas palavras / e as retorne juntas com um espaço entre elas.
+// RESULTADO ESPERADO:
+const concatenar = (palavra1, palavra2) => {
+    return palavra1 + " " + palavra2;
+}
+console.log(concatenar("Hello", "World")); // "Hello World"
+
+// CALLBACKS
+
+// 1) Crie uma função chamada calcular / que recebe dois números e uma função de callback / . O callback deve ser a função de soma.
+// RESULTADO ESPERADO:
+function calcular(numero1, numero2, operacao){
+   return operacao(numero1,numero2); // 8
+}
+const resultado = calcular(5, 3,soma); // 8
+console.log(resultado);
+
+// 2) Crie uma função chamada calcularDobro/ que recebe um número e uma função de callback. O callback deve ser a função que retorna o dobro do número.
+// RESULTADO ESPERADO:
+function calcularDobro(numero,functionDobro){
+    return functionDobro(numero);
+}
+const resultadoDobro = calcularDobro(5,dobro); // 10
+console.log(resultadoDobro)
+// OBS: Palavras RESERVADAS são palavras que o javascript utiliza 
+// e que não podemos declarar funções, variaveis e nem parametros com elas 
+// var / const / let / Number / String / boolean / function / return / if / else / else if / console
+// log 
+
+// 3) Crie uma função modificarTexto que recebe uma string e um callback. O callback deve transformar a string em maiúsculas.
+// RESULTADO ESPERADO:
+// const resultado = modificarTexto("Beatriz",maiusculo); // "BEATRIZ"
+
+// 4) Crie uma função processarTexto que recebe uma palavra e um callback. O callback deve retornar a primeira letra da palavra.
+// RESULTADO ESPERADO:
+// const resultado = processarTexto("Javascript",primeiraLetra); // J
+
+// 5) Crie uma função avaliarNumero que recebe um número e um callback. O callback deve verificar se o número é positivo, negativo ou zero.
+// RESULTADO ESPERADO:
+// const resultado = avaliarNumero(-10,verificarNumero); // "positivo"
+
+// 6) Crie uma função contarCaracteres que recebe uma string e um callback. O callback deve retornar o número de caracteres da string.
+// RESULTADO ESPERADO:
+// const resultado = contarCaracteres("Hello", tamanhoString); // 4
+
+// 7) Crie uma função juntarPalavras que recebe duas palavras e um callback. O callback deve concatenar as palavras com um espaço entre elas.
+// RESULTADO ESPERADO:
+// const resultado = juntarPalavras("Hello", "World",concatenar); // "Hello World"
+

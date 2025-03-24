@@ -54,6 +54,7 @@ const verificarCorFundo = () => {
         titulo.style.color = "blue";
     }
 }
+
 // inserindo função a ser executada ao botao
 // addEventListener -> função responsavel por associar uma ação do usuario a função
 // primeiro parametro do addEventListener é uma string ""
@@ -66,7 +67,7 @@ btnEntrar.addEventListener("click", function (){
     } else{
        titulo.style.backgroundColor = "green";
        btnEntrar.innerText = "acesso";
-       logado.style.display = "flex";
+       logado.style.display = "";
     }
 });
 
@@ -75,11 +76,11 @@ const btnAbrirFechar = document.getElementById("btn-abrir-fechar");
 
 btnAbrirFechar.addEventListener("click", ()=> {
     if(imgPorta.src === "http://127.0.0.1:5500/porta-aberta.png"){
-        imgPorta.src = "http://127.0.0.1:5500/porta-fechada.png"
+        imgPorta.src = "http://127.0.0.1:5500/porta-fechada.png";
     }else{
-        imgPorta.src = "http://127.0.0.1:5500/porta-aberta.png"
+        imgPorta.src = "http://127.0.0.1:5500/porta-aberta.png";
     }
-})
+});
 
 
 

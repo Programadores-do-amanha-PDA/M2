@@ -1,5 +1,5 @@
 
-//                         parametros
+//                      parametros
 // function somarValores(valor1, valor2){
 //   var resultado = valor1 + valor2
 //   // 7
@@ -104,7 +104,6 @@ btnClick.addEventListener("click", function (){
 
    // pegar operação que o usuario quer fazer
    let operacao = prompt("digite uma operaçao").toLowerCase();
-
    verificarOperacao(valor1,valor2,operacao)
 })
 

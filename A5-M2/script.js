@@ -87,6 +87,7 @@ const verifyStatus = (status) => {
     }
 }
 
+
 function createList(img, otherImg, title, description, price, oldPrice, status){
     // criando a tag li no javascript
     const itemList = document.createElement("li");
