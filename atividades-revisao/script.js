@@ -252,11 +252,48 @@ document.body.appendChild(paragrafo);
 paragrafo.innerText = "Texto alterado pelo JavaScript!"
 
 // 2) No JavaScript, crie um botão <button> e adicione-o ao body. Depois, adicione a classe "botao-estilizado" ao botão.
+// criando elemento
+const botao = document.createElement("button");
+// mudou texto do botao
+botao.innerText = "Clique aqui";
+// adicionou uma classe de estilização no botao
+botao.classList.add("botao-estilizado");
+// adicionou ao body
+document.body.appendChild(botao);
 
 // 3) No JavaScript, crie um <h1> e adicione-o ao body. Depois, altere a cor do texto para "blue".
+// criando elemento
+const texto = document.createElement('h1')
+// alterou o texto 
+texto.textContent = 'deu certo';
+// alterou a cor do texto
+texto.style.color = 'blue';
+// adicionou ao body
+document.body.appendChild(texto)
 
 // 4) No JavaScript, crie uma <div> e adicione-a ao body. Depois, altere a cor de fundo da <div> para "lightgray".
+const container = document.createElement("div");
+container.style.width = "24px";
+container.style.height = "24px";
+container.style.backgroundColor = 'lightgray'
+document.body.appendChild(container);
 
 // 5) No JavaScript, crie um <span> e adicione-o ao body. Depois, adicione uma borda de 2px solid black ao <span>.
+// criando elemento
+const textoBorda = document.createElement('span')
+// alterou o textoBorda 
+textoBorda.innerText = 'borda';
+// alterou a cor do textoBorda
+textoBorda.style.border = '2px solid black'
+// adicionou ao body
+document.body.appendChild(textoBorda)
 
 // 6) No JavaScript, crie um <p> e adicione-o ao body. Depois, aumente o tamanho da fonte para "24px".
+// criando elemento
+const textoSize = document.createElement('p')
+// alterou o textoSize 
+textoSize.innerText = 'aumentando font-size';
+// alterou a cor do textoSize
+textoSize.style.fontSize = "50px"
+// adicionou ao body
+document.body.appendChild(textoSize)
