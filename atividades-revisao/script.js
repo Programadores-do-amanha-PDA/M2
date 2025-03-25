@@ -269,7 +269,6 @@ texto.textContent = 'deu certo';
 // alterou a cor do texto
 texto.style.color = 'blue';
 // adicionou ao body
-document.body.appendChild(texto)
 
 // 4) No JavaScript, crie uma <div> e adicione-a ao body. Depois, altere a cor de fundo da <div> para "lightgray".
 const container = document.createElement("div");
@@ -297,3 +296,22 @@ textoSize.innerText = 'aumentando font-size';
 textoSize.style.fontSize = "50px"
 // adicionou ao body
 document.body.appendChild(textoSize)
+
+// EVENTO OUVINTE 
+
+// 1) Crie um <p> com o texto "Clique para mudar a cor". Ao clicar no <p>, a cor do texto deve mudar para "blue".
+
+// 2) Crie um <div> com um texto qualquer. Quando o mouse passar sobre a <div>, a cor de fundo deve mudar para "lightgray".
+
+// 3) Crie um <h1> com o texto "Clique para aumentar o tamanho". Ao clicar no <h1>, o tamanho do texto deve aumentar para "32px".
+
+// 4) Crie um <span> com o texto "Passe o mouse aqui". Quando o mouse passar sobre o <span>, uma borda "2px solid black" deve ser adicionada.
+
+// 5) Crie um <button> com o texto "Clique para alternar cor". Ao clicar no botão, a cor do texto deve alternar entre "red" e "black".
+
+// 6) Crie um <p> com o texto "Clique para esconder". Quando clicar nele, ele deve desaparecer (display: none).
+
+// 7) Crie um <div> vazio. Quando o mouse passar sobre ele, exiba o texto "Você passou o mouse aqui!".
+
+// 8) Quando pressionar a tecla "b", a cor de fundo do <body> deve mudar para "blue". Quando pressionar "w", a cor volta para "white".
+
