@@ -77,6 +77,10 @@ const products = [
 const containerList = document.getElementById("container-list");
 const ulListProducts = document.getElementById("product-list");
 
+// porque função anonima?
+// porque nao tem nome
+// função anônima exerce funções específicas
+// recomendada para códigos pequenos
 const verifyStatus = (status) => {
     if(status === "pending"){
         return 'yellow'
@@ -87,11 +91,10 @@ const verifyStatus = (status) => {
     }
 }
 
-
 function createList(img, otherImg, title, description, price, oldPrice, status){
     // criando a tag li no javascript
     const itemList = document.createElement("li");
-    
+
     // criando a tag div para img no javascript
     const divImg = document.createElement("div");
     const imgProduct = document.createElement("img");

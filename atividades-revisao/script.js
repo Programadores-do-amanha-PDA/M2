@@ -185,7 +185,7 @@ const concatenar = (palavra1, palavra2) => {
 }
 console.log(concatenar("Hello", "World")); // "Hello World"
 
-// CALLBACKS
+// CALLBACKS -> generalizar as funções e reutilizaveis
 
 // 1) Crie uma função chamada calcular / que recebe dois números e uma função de callback / . O callback deve ser a função de soma.
 // RESULTADO ESPERADO:
@@ -246,8 +246,8 @@ console.log(resultadoAvaliarNumero)
 
 // 1) No JavaScript, crie um elemento <p> / e adicione-o ao body./ Depois, altere o texto do <p> para "Texto alterado pelo JavaScript!".
 // criando elemento
-const paragrafo = document.createElement("P");
-// adicionando ao body
+const paragrafo = document.createElement("p");
+// adicionou ao body do HTML 
 document.body.appendChild(paragrafo);
 paragrafo.innerText = "Texto alterado pelo JavaScript!"
 
@@ -258,7 +258,7 @@ const botao = document.createElement("button");
 botao.innerText = "Clique aqui";
 // adicionou uma classe de estilização no botao
 botao.classList.add("botao-estilizado");
-// adicionou ao body
+// adicionou ao body do HTML
 document.body.appendChild(botao);
 
 // 3) No JavaScript, crie um <h1> e adicione-o ao body. Depois, altere a cor do texto para "blue".
@@ -268,7 +268,7 @@ const texto = document.createElement('h1')
 texto.textContent = 'deu certo';
 // alterou a cor do texto
 texto.style.color = 'blue';
-// adicionou ao body
+// adicionou ao body do HTML
 
 // 4) No JavaScript, crie uma <div> e adicione-a ao body. Depois, altere a cor de fundo da <div> para "lightgray".
 const container = document.createElement("div");
@@ -284,7 +284,7 @@ const textoBorda = document.createElement('span')
 textoBorda.innerText = 'borda';
 // alterou a cor do textoBorda
 textoBorda.style.border = '2px solid black'
-// adicionou ao body
+// adicionou ao body do HTML
 document.body.appendChild(textoBorda)
 
 // 6) No JavaScript, crie um <p> e adicione-o ao body. Depois, aumente o tamanho da fonte para "24px".
@@ -294,7 +294,7 @@ const textoSize = document.createElement('p')
 textoSize.innerText = 'aumentando font-size';
 // alterou a cor do textoSize
 textoSize.style.fontSize = "50px"
-// adicionou ao body
+// adicionou ao body do HTML
 document.body.appendChild(textoSize)
 
 // EVENTO OUVINTE 
@@ -306,8 +306,28 @@ document.body.appendChild(textoSize)
 // 3) Crie um <h1> com o texto "Clique para aumentar o tamanho". Ao clicar no <h1>, o tamanho do texto deve aumentar para "32px".
 
 // 4) Crie um <span> com o texto "Passe o mouse aqui". Quando o mouse passar sobre o <span>, uma borda "2px solid black" deve ser adicionada.
+// criando elemento
+const textoSpan = document.createElement('span')
+// alterou o textoSpan 
+textoSpan.innerText = 'Passe o mouse aqui';
+// adicionando evento ouvinte ao "mouseenter"
+textoSpan.addEventListener("mouseenter", ()=> {
+    textoSpan.style.border = "2px solid black"
+})
+// adicionou ao body do HTML
+document.body.appendChild(textoSpan)
 
 // 5) Crie um <button> com o texto "Clique para alternar cor". Ao clicar no botão, a cor do texto deve alternar entre "red" e "black".
+// criando elemento
+const btnClick = document.createElement('button')
+// alterou o btnClick 
+btnClick.innerText = 'Passe o mouse aqui';
+// adicionando evento ouvinte ao "click"
+btnClick.addEventListener("click", () => {
+    btnClick.style.color = "red"
+});
+// adicionou ao body do HTML
+document.body.appendChild(btnClick)
 
 // 6) Crie um <p> com o texto "Clique para esconder". Quando clicar nele, ele deve desaparecer (display: none).
 
