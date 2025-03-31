@@ -22,11 +22,12 @@
 
 // criando classe Pessoa
 class Pessoa{
-    // construtor é a função responsavel por pegar os parametros
+    // construtor é a método(função) responsavel por pegar os parametros
     // para criar um novo objeto 
     // (atributos/caracteristicas)
    constructor(cpf,nome,idade, corCabelo){
         // this. variavel dentro da classe
+        // const cpf = cpf; linha debaixo equivalente a este código
         this.cpf = cpf;
         this.nome = nome;
         this.idade = idade;
@@ -49,7 +50,6 @@ class Pessoa{
    }
 } 
 
-
 // instanciar uma classe -> criar um objeto daquela classe
 const usuario = new Pessoa("123.123.123-88","Beatriz",24);
 const usuario2 = new Pessoa("123.123.123-99", "Tabata", 25);
@@ -67,14 +67,12 @@ const usuario3 = new Pessoa("123.123.123-22", "Davi", 18);
 
 // createUser()
 
-
 let listaUsuarios = []
 listaUsuarios.push(usuario,usuario2, usuario3);
 
 // usuario.idade = 28
 usuario.fezAniversario();
 console.log(usuario);
-
 
 // {
 //     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQx8nuNGRMYu2Lb4d5XBec7eBf6s70Fu1osezyE6P9-5POryWhvZ-SCAE8YqvLDojmAvSUH81sn4jl2wiObmzQMlUHnOWgrPrSxvz2uSCkEZSk009CdjrTf-qPO1a7GCOUiRQ-Gvg&usqp=CAc",
@@ -120,7 +118,6 @@ class Estudante {
 // criando um objeto Carro -> instanciando um objeto Carro
 const meriva = new Carro("Meriva", "ford", "flex", "retch", 12000);
 const celta = new Carro("Celta", "ford", "gasolina", "sedan", 2000);
-
 
 class Funcionario{
     //             atributos -> caracteristicas
