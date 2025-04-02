@@ -1,4 +1,8 @@
 
+// 0,1,2,3,4
+// (index,1)
+// (2,1)
+// 0,1,3,4
 
 // criar um array vazio
 const products = [
@@ -158,6 +162,13 @@ function createList(index, img, otherImg, title, description, price, oldPrice, s
 
     btnDelete.addEventListener("click", ()=>{
       console.log("deletar")
+      // 0,1,2,3,4
+      // (index,1)
+      // (2,1)
+      // 0,1,3,4
+      // apagando objeto do array
+      products.splice(index, 1); 
+      listProduct();
     });
 
     // adicionar as classes de estilização
