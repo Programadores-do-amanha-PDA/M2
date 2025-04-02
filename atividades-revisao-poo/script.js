@@ -80,7 +80,7 @@ var restaurante = {
 // R: Produto
 // o cliente busca um PRODUTO
 // o funcionario vende um PRODUTO
-// o carrinho adiciona um PRODUTO
+// o carrinho guarda uma lista de PRODUTO
 
 // Aplicativo de Música
 // Um aplicativo de streaming de música armazena informações sobre cada música disponível. 
