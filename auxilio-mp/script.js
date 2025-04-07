@@ -53,6 +53,43 @@ const products = [
   },
 ];
 
+const animes = [];
+
+class Anime{
+  constructor(nomeAnime, quantidadeTemporadas){
+    this.nomeAnime = nomeAnime;
+    this.quantidadeTemporadas = quantidadeTemporadas;
+  }
+};
+
+const inputNomeAnime = document.getElementById("nomeAnime");
+const inputQuantidadeTemporada = document.getElementById("temporadasAnime");
+const btnSaveAnime = document.getElementById("btn-save-anime")
+
+function createAnimeHtml(nome,temporadas){
+  const nomeAnime = createElement("h1");
+  const quantidadetemporadas = createElement("");
+
+  nomeAnime.innerText = nome;
+  quantidadetemporadas.innerText = temporadas;
+
+  document.body.appendChild(nomeAnime);
+  document.body.appendChild(quantidadetemporadas);
+};
+
+btnSaveAnime.addEventListener("click", ()=> {
+  // criando objeto
+   const anime = new Anime(inputNomeAnime, inputQuantidadeTemporada)
+   // adicionando objeto no array
+   animes.push(anime);
+   // percorrendo o array e criando as informações no html
+   for (let i = 0; i < animes.length; i++) {
+    createAnimeHtml(anime[i]);
+   }
+});
+
+
+
 // criar o objeto 
 // class Produto
 class Product{
@@ -68,7 +105,7 @@ class Product{
 }
 
 // buscando os inputs(caixa de texto que o usuario esta digitando)
-const inputImg = document.getElementById("input-img");
+const inputImg = document.getElementById("input-img"); // .value -> beatriz
 const inputOtherImg = document.getElementById("input-otherImg");
 const inputTitle = document.getElementById("input-title");
 const inputDescription = document.getElementById("input-description");
@@ -77,23 +114,6 @@ const inputOldPrice = document.getElementById("input-oldPrice");
 const inputStatus = document.getElementById("input-status");
 const btnSave = document.getElementById("btn-save");
 const btnList = document.getElementById("btn-list");
-
-// associar uma função a uma interação do usuario 
-btnSave.addEventListener("click", ()=> {
-  console.log("input: ",inputImg.value,inputOtherImg.value, inputTitle.value, inputDescription.value, inputPrice.value, inputOldPrice.value, inputStatus.value)
-  // criando um novo objeto produto
-  const product = new Product(inputImg.value,inputOtherImg.value, inputTitle.value, inputDescription.value, inputPrice.value, inputOldPrice.value, inputStatus.value)
-  console.log("product obj: ",product)
-  // .push adicionar um novo elemento ao final do meu array
-  products.push(product)
-  console.log("array: ", products)
-});
-
-// quando não sabemos a quantidade de uls que vamos criar 
-// criamos a tag ul pelo javascript
-const containerList = document.getElementById("container-list");
-const ulListProducts = document.getElementById("product-list");
-
 
 // funções anonimas servem para especificar uma tarefa 
 const listProduct = () => {
@@ -104,6 +124,26 @@ const listProduct = () => {
     createList(i,products[i].img, products[i].otherImg, products[i].title, products[i].description, products[i].price, products[i].oldPrice, products[i].status)
   }
 }
+
+// associar uma função a uma interação do usuario 
+btnSave.addEventListener("click", ()=> {
+  console.log("input: ",inputImg.value,inputOtherImg.value, inputTitle.value, inputDescription.value, inputPrice.value, inputOldPrice.value, inputStatus.value)
+ 
+  // criando um novo objeto produto
+  // pegando o .value(valor que o usuario digitou) de cada input(caixa de texto)
+  const product = new Product(inputImg.value,inputOtherImg.value, inputTitle.value, inputDescription.value, inputPrice.value, inputOldPrice.value, inputStatus.value)
+  console.log("product obj: ",product)
+  
+  // .push adicionar um novo elemento ao final do meu array
+  products.push(product)
+  console.log("array: ", products);
+  listProduct();
+});
+
+// quando não sabemos a quantidade de uls que vamos criar 
+// criamos a tag ul pelo javascript
+const containerList = document.getElementById("container-list");
+const ulListProducts = document.getElementById("product-list");
 
 btnList.addEventListener("click", listProduct);
 
