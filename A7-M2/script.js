@@ -106,7 +106,7 @@ btnBuscarPokemon.addEventListener("click", ()=> {
   buscar(inputNamePokemon.value);
 });
 
-// getInfoPokemon();
+getInfoPokemon();
 
 // criar uma função que faça uma requisição para a api de pokemon 
 // essa função deve receber as informações do pokemon e alterar 
@@ -114,3 +114,4 @@ btnBuscarPokemon.addEventListener("click", ()=> {
 // OBS: quero ver todas as imagens do pokemon e o nome dele 
 
 // quando passa o mouse encima muda para virar de lado
+
