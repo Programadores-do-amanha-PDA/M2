@@ -1,6 +1,6 @@
 
 // fetch -> uma FUNÇÃO NATIVA do javascript, que apenas faz requisições para APIs
-// async(assincrono)/ await(aguardar) -> 
+// async(assincrono)/ await(aguardar) -> SEMPRE COLOCAR QUANDO CHAMAR A FUNÇÃO FETCH
 // Promise(promessa) -> representa a PROMESSA de uma resposta, sendo ela positiva ou negativa
 // Promise {<pending>} -> esta faltando AWAIT 
 
