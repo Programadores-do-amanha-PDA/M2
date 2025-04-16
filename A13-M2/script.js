@@ -32,3 +32,43 @@ const carrinho = ["notebook", "fone sony"];
 
 const novoCarrinho = ["teclado", ...carrinho, ...nomes];
 console.log(novoCarrinho);
+
+
+// MVC -> Model / View / Controller
+
+// Model -> Modelo
+// MODELO DE OBJETO -> VULGO CLASS
+class Product{
+    constructor(image, name, price){
+        this.image = image;
+        this.name = name;
+        this.price = price;
+    }
+
+    discount(){
+        this.price = this.price - (this.price * 0.10);
+    }
+
+    changeName(newName){
+        this.name = newName;
+    }
+}
+
+// View -> Tudo que o usuario vê
+const titleProduct = document.getElementById("name-product");
+titleProduct.innerText = "Batata";
+
+// Controller -> Controlador irá controlar o OBJETO
+// criando um novo objeto
+// editando algum valor dentro do objeto
+const newProduct = new Product("./abacaxi.png", "abacaxi", 50);
+newProduct.discount();
+newProduct.changeName("abacaxi coroa");
+
+
+// Model - class
+// View - document.
+// controller - nomeObjeto.metodo() ou new NomeClasse()
+
+
+// -------------------------------------------------------
