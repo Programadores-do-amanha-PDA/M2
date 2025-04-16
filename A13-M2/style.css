@@ -1,0 +1,39 @@
+body {
+    background-color: #2c003e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .card {
+    background-color: #d9ab13;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 340px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .card img {
+    width: 100%;
+    display: block;
+  }
+
+  #card-footer {
+    background-color: #f2cb05;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  #span-name-product{
+    color: #000;
+  }
+
+  #span-price-product{
+    color: white;
+  }
