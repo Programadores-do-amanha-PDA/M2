@@ -107,3 +107,36 @@ btnNumero.addEventListener("click", ()=> {
 // }else{
 
 // }
+
+
+// REST -> COLOCAR TUDO DENTRO DE UMA CAIXA(ARRAY)
+// ... antes do nome de um parametro SIGNIFICA QUE ESTAMOS CRIANDO UM ARRAY
+function adicionarBrinquedos(...brinquedos){
+    "dama",
+    "carrinho"
+    // ...brinquedos
+    // const brinquedos = ["dama", "carrinhos", "boneca", "jogo da vida"];
+   for (let i = 0; i < brinquedos.length; i++) {
+            console.log(brinquedos[i])    
+   }
+   return brinquedos;
+}
+
+//                                                ["dama", "carrinhos", "boneca", "jogo da vida"]
+const brinquedosAdicionados = adicionarBrinquedos("dama", "carrinhos", "boneca", "jogo da vida");
+
+
+// olhar e separar os elementos dentro de um array
+for (let i = 0; i < brinquedosAdicionados.length; i++) {
+    // avaliando cada informação individualmente
+    console.log(brinquedos[i])
+}
+
+
+const numeros = [1,2,3,4,5];
+// let maior = Math.max(1,2,3,4,5)
+let maior = Math.max(...numeros);
+
+const teste = {
+    dadosPessoais: {...infos}
+}

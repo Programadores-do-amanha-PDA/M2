@@ -57,12 +57,12 @@ function quantosAnos(){
     const hoje = moment();
     //                         ano-dia-mes
     const nascimento = moment('2000-04-05')
-    const idade = hoje.diff(nascimento,'hours');
+    const idade = moment('2025-11-30').diff(hoje,'months');
     return idade;
 }
 
 // DD/MM/YYYY
-date.innerText = novaData();
+date.innerText = quantosAnos();
 
 // function novaData() {
 //     const hoje = new Date();
