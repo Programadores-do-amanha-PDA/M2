@@ -81,3 +81,32 @@ const subtrair = (a,b) => {
 }
 console.log(subtrair(30,3));
 
+
+// Arrow Function -> uma função anonima simplificada
+
+// função anonima completa  function (a,b){}
+const multiplicar = function (a,b) {
+    return a*b
+}
+
+// função anonima simplificada (a,b) => {}
+const multiplicarSimplificado = (a,b) =>{
+    return a*b
+}
+
+// Operação Ternária -> um if/else simplificado
+const almocou = true
+
+// if/else completo UNO WAY
+if(almocou === true){
+    console.log("vou comer a sobremesa") 
+}else{
+    console.log("nao vai comer a sobremesa") 
+}
+
+// return ele sempre vai funcionar dentro de um bloco de código
+// if/else simplificado MERCEDES
+const result = (almocou === true) ? "vou comer a sobremesa": "nao vai comer a sobremesa";
+console.log(result);
+
+
