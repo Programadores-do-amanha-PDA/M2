@@ -20,5 +20,5 @@ const numeros = [1,2,3,4,5,6]
 const multiplosDeTres = numeros.map(numero => numero * 3);
 console.log(multiplosDeTres);
 
-
-
+const filtrandoNumerosDivisiveisPorDois = numeros.filter(numero => (numero % 2) != 0)
+console.log(filtrandoNumerosDivisiveisPorDois)
